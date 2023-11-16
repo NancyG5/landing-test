@@ -1,0 +1,248 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#section1 {
+    width: 1053px;
+    margin: 0 auto;
+    text-align: left;
+}
+.section1-content{
+    font-weight: 700;
+    font-size: 29px;
+    color: #FF0000;
+}
+.section1-text1{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#section1  img{
+   display: block;
+   margin: 0 auto; 
+}
+.section1-text2 {
+    width: 1049px;
+    font-weight: 700;
+    font-size: 29px;
+    color: #222222;
+}
+.section1-text3 {
+    width: 1049px;
+    font-weight: normal;
+    font-size: 25px;
+    color: #222222;
+}
+
+#section2{
+    width: 1064px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#section2 img {
+    width: 1024px;
+    height: 684px;
+    display: block;
+    margin: 0 auto;
+}
+
+#section2 p {
+    width: 1049px;
+    font-weight: 600 normal;
+    font-size: 25px;
+    color: #222222;
+}
+ul{
+    font-weight: 600 normal;
+    font-size: 25px;
+    color: #222222;
+}
+
+
+footer{
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: bisque;
+}
+form {
+    max-width: 400px;
+    height: 650px;
+    /* margin: 20px auto; */
+    margin: 0 auto;
+}
+
+#timer{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #FF0000;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+form img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0 ;
+}
+
+
+
+  /* Стили для попапа */
+  .popup-container {
+    width: 300px;
+    height: 200px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+    animation: slideIn 0.5s ease-out;
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Стили для кнопки в попапе */
+.popup-button {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    background: #0d932c;
+    padding: 15px 60px;
+    margin-top: 50px;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+    transform: scale(1);
+    animation: light 1s infinite alternate;
+}
+.popup-button:hover {
+    transform: scale(1.03);
+}
+@keyframes light {
+    0% {
+       -webkit-box-shadow: 0px 0px 20px 0px rgba(77, 227, 94, 0);
+       -moz-box-shadow: 0px 0px 20px 0px rgba(77, 227, 94, 0);
+       box-shadow: 0px 0px 20px 0px rgba(77, 227, 94, 0);
+    }
+    100% {
+       -webkit-box-shadow: 0px 0px 20px 0px rgb(77, 227, 77);
+       -moz-box-shadow: 0px 0px 20px 0px rgba(77, 227, 77);
+       box-shadow: 0px 0px 20px 0px rgba(77, 227, 77);
+    }
+ }
+
+/* Анимация появления поп-апа */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%) translateY(100%);
+    }
+    to {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.close-button {
+    transition: all 0.5s ease;
+    position: absolute;
+    background-color: #3bc92e;
+    padding: 1.5px 7px;
+    left: 0;
+    margin-left: -5px;
+    margin-top: -25px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    -webkit-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: -3px 1px 6px 0px rgba(0,0,0,0.1);
+}
+
+.close-button:hover {
+    background-color: tomato;
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/* Адаптив для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px; 
+    }
+
+    header img {
+        width: 100%; 
+    }
+
+    #section1 p.section1-content {
+        font-size: 18px; 
+    }
+
+    #section1 img {
+        width: 100%; 
+    }
+
+    #section1 .section1-text1 {
+        font-size: 14px; 
+    }
+
+    #section1 p.section1-text2 {
+        font-size: 16px; 
+    }
+
+    #section2 p {
+        font-size: 16px; 
+    }
+
+    footer img {
+        width: 80px; 
+    }
+    #timer {
+        font-size: 18px;
+        color: #FF0000;
+    }
+
+    #footer-form {
+        padding: 10px; 
+    }
+
+    .popup-container {
+        width: 90%;
+    }
+}
